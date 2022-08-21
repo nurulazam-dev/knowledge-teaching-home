@@ -39,9 +39,30 @@ const Navbar = () => {
                             <li><Link to='/dashboard' className='text-xl '>Dashboard</Link></li>
                             <li><Link to='/about' className='text-xl '>About</Link></li>
                             <li><Link to='/contact' className='text-xl '>Contact</Link></li>
-                            <li><Link to='/studentRegister' className='text-xl '>S. SignUp</Link></li>
+
+
                             <li> {
-                                user ? <button onClick={logout} className='btn btn-Link btn-outline  text-decoration-none fs-5'>Sign out</button> : <Link to='/login' className='rounded-lg text-xl '>Login</Link>
+                                user ? <button onClick={logout} className='btn btn-Link btn-outline fs-5'>S. Sign out</button> : <>
+                                    <li class="dropdown dropdown-hover">
+                                        <li ><Link to='' className='text-xl '>Student</Link></li>
+                                        <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
+                                            <li><Link to='/studentRegister' className='text-xl '>Register</Link></li>
+                                            <li><Link to='/studentLogin' className='text-xl '>Login</Link></li>
+                                        </ul>
+                                    </li>
+                                </>
+                            } </li>
+
+                            <li> {
+                                user ? <button onClick={logout} className='btn btn-Link btn-outline fs-5'>T. Sign out</button> : <>
+                                    <li class="dropdown dropdown-hover">
+                                        <li ><Link to='' className='text-xl '>Teacher</Link></li>
+                                        <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
+                                            <li><Link to='/studentRegister' className='text-xl '>Register</Link></li>
+                                            <li><Link to='/studentLogin' className='text-xl '>Login</Link></li>
+                                        </ul>
+                                    </li>
+                                </>
                             } </li>
                         </ul>
 

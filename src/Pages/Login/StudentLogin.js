@@ -88,7 +88,7 @@ const StudentLogin = () => {
                         {signInError}
                         <input className='btn w-full max-w-xs text-white' type="submit" value='Login' />
                     </form>
-                    <p className='text-center'><small>New to KTH ? <Link className='text-secondary' to='/signUp'>Create New Account</Link> </small></p>
+                    <p className='text-center'><small>New to KTH ? <Link className='text-secondary' to='/studentRegister'>Create New Account</Link> </small></p>
 
                 </div>
             </div>

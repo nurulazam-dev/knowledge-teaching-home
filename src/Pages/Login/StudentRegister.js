@@ -105,7 +105,7 @@ const StudentRegister = () => {
                         {signInError}
                         <input className='btn w-full max-w-xs text-white' type="submit" value='register' />
                     </form>
-                    <p className='text-center'><small>Already have an account ? <Link className='text-secondary' to='/login'>Please Login</Link> </small></p>
+                    <p className='text-center'><small>Already have an account ? <Link className='text-secondary' to='/studentLogin'>Please Login</Link> </small></p>
                 </div>
             </div>
         </div>
