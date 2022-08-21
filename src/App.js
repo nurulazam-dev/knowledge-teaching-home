@@ -4,6 +4,7 @@ function App() {
   return (
     <div className="">
       <h2>knowledge-teaching-home</h2>
+      
     </div>
   );
 }
