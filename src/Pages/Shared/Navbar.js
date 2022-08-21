@@ -33,8 +33,8 @@ const Navbar = () => {
                         </h2>
                     </div>
 
-                    <div className="Link">
-                        <ul className={Mobile ? "nav-links-mobile" : "link f_flex uppercase"} onClick={() => setMobile(false)}>
+                    <div className="Links">
+                        <ul className={Mobile ? "nav-links-mobile" : "links f_flex uppercase"} onClick={() => setMobile(false)}>
                             <li><Link to='/' className='text-xl '>Home</Link></li>
                             <li><Link to='/dashboard' className='text-xl '>Dashboard</Link></li>
                             <li><Link to='/about' className='text-xl '>About</Link></li>
