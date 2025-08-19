@@ -4,7 +4,7 @@ import About from "./Pages/About";
 import Home from "./Pages/Home";
 import StudentLogin from "./Pages/Login/StudentLogin";
 import StudentRegister from "./Pages/Login/StudentRegister";
-import NotFound from "./Pages/NotFound/NotFound";
+import NotFound from "./Pages/NotFound";
 import Navbar from "./components/Shared/Navbar";
 
 function App() {
