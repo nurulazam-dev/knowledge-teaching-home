@@ -8,7 +8,7 @@ import { Link, useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
 import Loading from "../../components/Shared/Loading";
 
-const StudentRegister = () => {
+const Register = () => {
   const {
     register,
     formState: { errors },
@@ -159,4 +159,4 @@ const StudentRegister = () => {
   );
 };
 
-export default StudentRegister;
+export default Register;

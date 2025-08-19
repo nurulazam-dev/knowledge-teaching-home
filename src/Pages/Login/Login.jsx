@@ -5,7 +5,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
 import Loading from "../../components/Shared/Loading";
 
-const StudentLogin = () => {
+const Login = () => {
   const {
     register,
     formState: { errors },
@@ -133,4 +133,4 @@ const StudentLogin = () => {
   );
 };
 
-export default StudentLogin;
+export default Login;

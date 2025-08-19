@@ -2,8 +2,8 @@ import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import About from "./Pages/About";
 import Home from "./Pages/Home";
-import StudentLogin from "./Pages/Login/StudentLogin";
-import StudentRegister from "./Pages/Login/StudentRegister";
+import StudentLogin from "./Pages/Login/Login";
+import StudentRegister from "./Pages/Login/Register";
 import NotFound from "./Pages/NotFound";
 import Navbar from "./components/Shared/Navbar";
 
