@@ -1,13 +1,13 @@
 import React from "react";
-import Footer from "../components/Shared/Footer";
 import Banner from "../components/Home/Banner";
 
 const Home = () => {
   return (
     <div>
       <Banner />
-      <h2>This is knowledge-teaching-home Landing Page</h2>
-      <Footer />
+      <h2 className="text-2xl font-bold">
+        This is knowledge-teaching-home Landing Page
+      </h2>
     </div>
   );
 };
