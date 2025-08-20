@@ -1,7 +1,7 @@
 import { useLocation } from "react-router-dom";
-import Footer from "../components/Shared/Footer/Footer";
+import Navbar from "../components/Shared/Navbar";
 import Routers from "../Routes/Routers";
-import Header from "../components/Shared/Header";
+import Footer from "../components/Shared/Footer";
 
 const Layout = () => {
   const location = useLocation();
@@ -12,7 +12,7 @@ const Layout = () => {
 
   return (
     <>
-      <Header />
+      <Navbar />
       <main>
         <Routers />
       </main>
