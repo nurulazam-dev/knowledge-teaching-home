@@ -13,7 +13,7 @@ const Layout = () => {
   return (
     <>
       <Navbar />
-      <main className="min-h-screen flex flex-col">
+      <main className="min-h-screen flex flex-col bg-gradient-to-b from-[#050d1a] to-[#0a1629] text-white">
         <Routers />
       </main>
       {!hideFooter && <Footer />}

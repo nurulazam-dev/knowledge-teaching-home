@@ -1,137 +1,153 @@
 import { motion } from "framer-motion";
-import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
 
 const About = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
-      {/* Hero Section */}
-      <section className="text-center py-16 px-6 lg:px-24">
-        <motion.h1
-          initial={{ opacity: 0, y: -30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-4xl lg:text-5xl font-extrabold text-primary"
-        >
-          About Knowledge Teaching Home
-        </motion.h1>
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.3, duration: 0.6 }}
-          className="mt-6 text-lg text-gray-600 max-w-3xl mx-auto"
-        >
-          <span className="font-semibold text-primary">
-            Knowledge Teaching Home (KTH)
-          </span>{" "}
-          is a dedicated teaching platform and coaching center located in East
-          Raozan, Chattogram. We provide academic support for students from{" "}
-          <strong>Class 3 to Class 12</strong>, helping them achieve excellence
-          in both school and board exams.
-        </motion.p>
+    <main className="min-h-screen">
+      {/* Title */}
+      <section className="text-center py-14 px-6">
+        <h1 className="text-4xl md:text-5xl font-extrabold">
+          <span className="bg-gradient-to-r from-violet-600 via-indigo-600 to-orange-700 bg-clip-text text-transparent">
+            About Knowledge Teaching Home
+          </span>
+        </h1>
+        <p className="mt-5 max-w-3xl mx-auto text-gray-600">
+          We are a dedicated coaching center guiding students from{" "}
+          <strong>Class 3 to Class 12</strong> to build strong fundamentals and
+          excel in school and board examinations.
+        </p>
       </section>
 
-      {/* Mission & Vision */}
-      <section className="py-16 bg-gray-100 px-6 lg:px-24">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <motion.div
-            initial={{ x: -50, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl font-bold text-primary">Our Mission</h2>
-            <p className="mt-4 text-gray-700 leading-relaxed">
-              To provide high-quality education and guidance to students by
-              focusing on conceptual learning, problem-solving skills, and
-              confidence-building. We aim to create a positive learning
-              environment where every student can thrive.
-            </p>
-          </motion.div>
+      {/* Mission / Vision */}
+      <section className="px-6 lg:px-10 max-w-7xl mx-auto grid lg:grid-cols-2 gap-10">
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="p-6 bg-white rounded-2xl shadow-sm border"
+        >
+          <h2 className="text-2xl font-bold text-violet-600">Our Mission</h2>
+          <p className="mt-3 text-gray-700">
+            To make learning clear, structured, and enjoyable—so every student
+            understands concepts deeply, practices regularly, and gains
+            confidence to perform their best.
+          </p>
+        </motion.div>
 
-          <motion.div
-            initial={{ x: 50, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl font-bold text-primary">Our Vision</h2>
-            <p className="mt-4 text-gray-700 leading-relaxed">
-              To become a leading coaching institute in Bangladesh that empowers
-              young minds to excel academically and personally, preparing them
-              for higher education and future challenges.
-            </p>
-          </motion.div>
-        </div>
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          className="p-6 bg-white rounded-2xl shadow-sm border"
+        >
+          <h2 className="text-2xl font-bold text-indigo-600">Our Vision</h2>
+          <p className="mt-3 text-gray-700">
+            To be a trusted learning home in Bangladesh where students develop
+            strong academics, discipline, and a growth mindset for higher
+            studies and life.
+          </p>
+        </motion.div>
       </section>
 
-      {/* Services */}
-      <section className="py-16 px-6 lg:px-24 text-center">
-        <h2 className="text-3xl font-bold text-primary mb-10">Our Services</h2>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      {/* Subjects */}
+      <section className="mt-14 px-6 lg:px-10 max-w-7xl mx-auto">
+        <h3 className="text-2xl font-bold mb-6 text-gray-900">
+          Subjects We Teach
+        </h3>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {[
-            {
-              title: "English",
-              desc: "Improve grammar, writing & speaking skills.",
-            },
-            {
-              title: "ICT",
-              desc: "Master computer fundamentals & programming.",
-            },
-            {
-              title: "Accounting",
-              desc: "Build strong foundation in accounting principles.",
-            },
-            {
-              title: "Finance",
-              desc: "Learn financial concepts for academic & real-world use.",
-            },
-          ].map((service, idx) => (
+            { t: "English", c: "from-violet-600 to-violet-700" },
+            { t: "ICT", c: "from-indigo-600 to-indigo-700" },
+            { t: "Accounting", c: "from-orange-700 to-orange-600" },
+            { t: "Finance", c: "from-violet-600 to-orange-700" },
+          ].map((s, i) => (
             <motion.div
-              key={idx}
-              initial={{ opacity: 0, y: 30 }}
+              key={s.t}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: idx * 0.2 }}
               viewport={{ once: true }}
-              className="p-6 bg-white shadow-md rounded-2xl hover:shadow-lg transition"
+              transition={{ duration: 0.45, delay: i * 0.05 }}
+              className={`rounded-2xl p-[1px] bg-gradient-to-r ${s.c}`}
             >
-              <h3 className="text-xl font-semibold text-gray-800">
-                {service.title}
-              </h3>
-              <p className="mt-3 text-gray-600">{service.desc}</p>
+              <div className="h-full w-full rounded-2xl p-5 bg-white">
+                <p className="text-lg font-semibold text-gray-800">{s.t}</p>
+                <p className="text-sm text-gray-600 mt-1">
+                  Concept-first lessons, examples, and regular practice.
+                </p>
+              </div>
             </motion.div>
           ))}
         </div>
       </section>
 
-      {/* Contact & Social */}
-      <section className="py-16 bg-primary text-white text-center">
-        <h2 className="text-3xl font-bold">Contact Us</h2>
-        <p className="mt-4 text-lg">📍 East Raozan, Raozan, Chattogram</p>
-        <div className="flex justify-center gap-6 mt-6">
-          <a
-            href="https://facebook.com/KnowledgeTeachingHome"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <FaFacebook className="w-7 h-7 hover:scale-110 transition" />
-          </a>
-          <a
-            href="https://twitter.com/KnowledgeTeachingHome"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <FaTwitter className="w-7 h-7 hover:scale-110 transition" />
-          </a>
-          <a
-            href="https://instagram.com/KnowledgeTeachingHome"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <FaInstagram className="w-7 h-7 hover:scale-110 transition" />
-          </a>
+      {/* Why Choose Us */}
+      <section className="mt-14 px-6 lg:px-10 max-w-7xl mx-auto">
+        <h3 className="text-2xl font-bold mb-6 text-gray-900">
+          Why Parents & Students Choose KTH
+        </h3>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {[
+            "Small batches for individual attention",
+            "Clear notes & board-focused preparation",
+            "Regular homework, quizzes & feedback",
+            "Friendly mentors and safe environment",
+            "Parent updates & progress tracking",
+            "Convenient location in East Raozan",
+          ].map((point) => (
+            <div
+              key={point}
+              className="p-5 bg-white rounded-2xl border shadow-sm"
+            >
+              <div className="w-2.5 h-2.5 rounded-full bg-gradient-to-r from-violet-600 via-indigo-600 to-orange-700 inline-block mr-2" />
+              <span className="text-gray-700">{point}</span>
+            </div>
+          ))}
         </div>
       </section>
-    </div>
+
+      {/* Contact */}
+      <section className="mt-16">
+        <div className="bg-white border-t">
+          <div className="max-w-7xl mx-auto px-6 lg:px-10 py-10 grid md:grid-cols-2 gap-8 items-center">
+            <div>
+              <h3 className="text-2xl font-bold">Visit or Reach Us</h3>
+              <p className="mt-2 text-gray-700">
+                📍 East Raozan, Raozan, Chattogram
+              </p>
+              <div className="mt-4 flex flex-wrap gap-3">
+                <a
+                  href="https://facebook.com/KnowledgeTeachingHome"
+                  className="btn btn-sm border-violet-600 text-violet-600 hover:bg-violet-600 hover:text-white"
+                >
+                  Facebook
+                </a>
+                <a
+                  href="https://twitter.com/KnowledgeTeachingHome"
+                  className="btn btn-sm border-indigo-600 text-indigo-600 hover:bg-indigo-600 hover:text-white"
+                >
+                  X (Twitter)
+                </a>
+                <a
+                  href="https://instagram.com/KnowledgeTeachingHome"
+                  className="btn btn-sm border-orange-700 text-orange-700 hover:bg-orange-700 hover:text-white"
+                >
+                  Instagram
+                </a>
+              </div>
+            </div>
+            <div className="text-right">
+              <a
+                href="/contact"
+                className="btn text-white bg-gradient-to-r from-violet-600 via-indigo-600 to-orange-700"
+              >
+                Book a Consultation
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
   );
 };
 
