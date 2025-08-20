@@ -8,6 +8,9 @@ import Testimonials from "../components/Home/Testimonials";
 import Gallery from "../components/Home/Gallery";
 import AdmissionCTA from "../components/Home/AdmissionCTA";
 import FAQSection from "../components/Home/FAQSection";
+import Contact from "./Contact";
+import About from "./About";
+import AdmissionProcess from "../components/Home/AdmissionProcess";
 
 const Home = () => {
   return (
@@ -16,11 +19,14 @@ const Home = () => {
       <Hero />
       <Mentors />
       <WhyChooseUs />
+      <About />
       <StudentSuccess />
+      <AdmissionProcess />
       <Testimonials />
       <Gallery />
       <AdmissionCTA />
       <FAQSection />
+      <Contact />
     </>
   );
 };
