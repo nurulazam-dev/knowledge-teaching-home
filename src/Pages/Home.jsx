@@ -4,6 +4,7 @@ import Hero from "../components/Home/Hero";
 import Mentors from "../components/Home/Mentors";
 import WhyChooseUs from "../components/Home/WhyChooseUs";
 import StudentSuccess from "../components/Home/StudentSuccess";
+import Testimonials from "../components/Home/Testimonials";
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <Mentors />
       <WhyChooseUs />
       <StudentSuccess />
+      <Testimonials />
     </>
   );
 };
