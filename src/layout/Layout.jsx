@@ -13,7 +13,7 @@ const Layout = () => {
   return (
     <>
       <Navbar />
-      <main>
+      <main className="min-h-screen flex flex-col">
         <Routers />
       </main>
       {!hideFooter && <Footer />}
