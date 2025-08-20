@@ -23,8 +23,8 @@ const Navbar = () => {
               alt="Knowledge Teaching Home"
               className="h-10 mr-2 w-auto"
             />
-            <span className="hidden md:inline text-xl lg:text-2xl bg-gradient-to-r from-violet-600 to-indigo-700 bg-clip-text text-transparent capitalize">
-              Knowledge Teaching Home
+            <span className="hidden md:inline text-xl lg:text-2xl bg-gradient-to-r from-violet-600 to-indigo-700 bg-clip-text text-transparent">
+              KNOWLEDGE TEACHING HOME
             </span>
             <span className="md:hidden text-2xl bg-gradient-to-r from-violet-600 via-indigo-600 to-orange-700 bg-clip-text text-transparent">
               KTH
