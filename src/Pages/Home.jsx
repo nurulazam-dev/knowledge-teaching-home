@@ -4,10 +4,10 @@ import Hero from "../components/Home/Hero";
 
 const Home = () => {
   return (
-    <div>
+    <>
       <Banner />
       <Hero />
-    </div>
+    </>
   );
 };
 
