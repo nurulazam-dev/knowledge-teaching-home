@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <div>
       <Banner />
-      <h2>This is knowledge-teaching-home Leanding Page</h2>
+      <h2>This is knowledge-teaching-home Landing Page</h2>
       <Footer />
     </div>
   );
