@@ -1,77 +1,83 @@
 import { motion } from "framer-motion";
-import BannerImg from "../../assets/logo/logo.png";
+import { FaUsers, FaBookOpen, FaGraduationCap } from "react-icons/fa";
 
-const Hero = () => {
+export default function Hero() {
   return (
-    <section className="pt-28 bg-gradient-to-br from-violet-600 via-indigo-600 to-orange-700 text-white">
-      <div className="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-2 gap-10 items-center py-16">
-        {/* Left */}
+    <section className="relative bg-gradient-to-b from-[#050d1a] to-[#0a1629] text-white flex items-center py-12">
+      <div className="container mx-auto px-6 md:px-12 lg:px-20 flex flex-col md:flex-row items-center gap-10">
+        {/* Left Content */}
         <motion.div
-          initial={{ opacity: 0, x: -32 }}
+          className="flex-1 text-center md:text-left"
+          initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
-          className="space-y-6"
+          transition={{ duration: 0.8 }}
         >
-          <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">
-            Coaching for{" "}
-            <span className="underline decoration-white/60">Classes 3–12</span>
-            <br />
-            at{" "}
-            <span className="bg-white/20 rounded px-2">
-              Knowledge Teaching Home
-            </span>
+          <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6">
+            Welcome to{" "}
+            <span className="text-orange-500">Knowledge Teaching Home</span>
           </h1>
-          <p className="text-white/90 text-lg">
-            Master the core subjects with caring mentors. We specialize in
-            <span className="font-semibold"> English</span>,{" "}
-            <span className="font-semibold">ICT</span>,{" "}
-            <span className="font-semibold">Accounting</span>, and{" "}
-            <span className="font-semibold">Finance</span>. Located in East
-            Raozan, Raozan, Chattogram.
+          <p className="text-lg md:text-xl text-gray-300 mb-6">
+            A trusted{" "}
+            <span className="text-indigo-400 font-semibold">
+              private coaching center{" "}
+            </span>
+            where students from{" "}
+            <span className="text-orange-400">class 3 to 12</span> — school,
+            madrasha, and college — learn with care and guidance.
           </p>
-          <div className="flex flex-wrap gap-3">
-            <a
-              href="/courses"
-              className="btn text-white bg-black/20 hover:bg-black/30 border-0"
-            >
-              Explore Courses
-            </a>
-            <a
-              href="/contact"
-              className="btn bg-white text-violet-700 hover:bg-gray-100 border-0"
-            >
-              Contact Us
-            </a>
-          </div>
-          <div className="flex gap-2 text-sm">
-            <span className="px-3 py-1 rounded-full bg-white/15">
-              Small Batches
-            </span>
-            <span className="px-3 py-1 rounded-full bg-white/15">
-              Concept-first Teaching
-            </span>
-            <span className="px-3 py-1 rounded-full bg-white/15">
-              Board Exam Focus
-            </span>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+            <button className="px-6 py-3 text-lg rounded-full bg-orange-600 hover:bg-orange-500">
+              Get Admission
+            </button>
+            <button className="px-6 py-3 text-lg rounded-full bg-indigo-600 hover:bg-indigo-500">
+              Learn More
+            </button>
           </div>
         </motion.div>
 
-        {/* Right */}
+        {/* Right Illustration */}
         <motion.div
-          initial={{ opacity: 0, x: 32 }}
+          className="flex-1 flex justify-center"
+          initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="flex justify-center"
+          transition={{ duration: 0.8, delay: 0.3 }}
         >
-          <img
-            src={BannerImg}
-            alt="Knowledge Teaching Home banner"
-            className="w-full max-w-lg rounded-2xl shadow-2xl ring-1 ring-white/30"
-          />
+          <div className="grid grid-cols-2 gap-6">
+            <motion.div
+              className="bg-[#101b33] rounded-2xl p-6 shadow-lg flex flex-col items-center"
+              whileHover={{ scale: 1.05 }}
+            >
+              <FaBookOpen className="text-5xl text-orange-500 mb-3" />
+              <p className="text-lg font-semibold">School (Class 3-10)</p>
+            </motion.div>
+
+            <motion.div
+              className="bg-[#101b33] rounded-2xl p-6 shadow-lg flex flex-col items-center"
+              whileHover={{ scale: 1.05 }}
+            >
+              <FaUsers className="text-5xl text-indigo-500 mb-3" />
+              <p className="text-lg font-semibold">Madrasha Students</p>
+            </motion.div>
+
+            <motion.div
+              className="bg-[#101b33] rounded-2xl p-6 shadow-lg flex flex-col items-center"
+              whileHover={{ scale: 1.05 }}
+            >
+              <FaGraduationCap className="text-5xl text-orange-400 mb-3" />
+              <p className="text-lg font-semibold">College (Class 11-12)</p>
+            </motion.div>
+
+            <motion.div
+              className="bg-[#101b33] rounded-2xl p-6 shadow-lg flex flex-col items-center"
+              whileHover={{ scale: 1.05 }}
+            >
+              <FaBookOpen className="text-5xl text-indigo-400 mb-3" />
+              <p className="text-lg font-semibold">Expert Mentors</p>
+            </motion.div>
+          </div>
         </motion.div>
       </div>
     </section>
   );
-};
-
-export default Hero;
+}
