@@ -1,7 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-
+import brandLogo from "../../assets/logo/logo.png";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -14,15 +14,22 @@ const Navbar = () => {
 
   return (
     <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-lg shadow-sm">
-      <div className="max-w-7xl mx-auto flex items-center justify-between py-4 px-6 lg:px-10">
+      <div className="max-w-7xl mx-auto flex items-center justify-between py-2 px-6 lg:px-10">
         {/* Brand */}
         <Link to="/" className="font-extrabold tracking-tight">
-          <span className="hidden md:inline text-xl lg:text-2xl bg-gradient-to-r from-violet-600 via-indigo-600 to-orange-700 bg-clip-text text-transparent">
-            Knowledge Teaching Home
-          </span>
-          <span className="md:hidden text-2xl bg-gradient-to-r from-violet-600 via-indigo-600 to-orange-700 bg-clip-text text-transparent">
-            KTH
-          </span>
+          <div className="flex justify-center items-center">
+            <img
+              src={brandLogo}
+              alt="Knowledge Teaching Home"
+              className="h-10 mr-2 w-auto"
+            />
+            <span className="hidden md:inline text-xl lg:text-2xl bg-gradient-to-r from-violet-600 to-indigo-700 bg-clip-text text-transparent capitalize">
+              Knowledge Teaching Home
+            </span>
+            <span className="md:hidden text-2xl bg-gradient-to-r from-violet-600 via-indigo-600 to-orange-700 bg-clip-text text-transparent">
+              KTH
+            </span>
+          </div>
         </Link>
 
         {/* Desktop nav */}
