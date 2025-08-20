@@ -5,7 +5,7 @@ import Home from "./Pages/Home";
 import StudentLogin from "./Pages/Login/Login";
 import StudentRegister from "./Pages/Login/Register";
 import NotFound from "./Pages/NotFound";
-import Navbar from "./components/Shared/Navbar";
+import Navbar from "./components/Shared/NavbarOld";
 
 function App() {
   return (
