@@ -7,6 +7,7 @@ import StudentSuccess from "../components/Home/StudentSuccess";
 import Testimonials from "../components/Home/Testimonials";
 import Gallery from "../components/Home/Gallery";
 import AdmissionCTA from "../components/Home/AdmissionCTA";
+import FAQSection from "../components/Home/FAQSection";
 
 const Home = () => {
   return (
@@ -19,6 +20,7 @@ const Home = () => {
       <Testimonials />
       <Gallery />
       <AdmissionCTA />
+      <FAQSection />
     </>
   );
 };
