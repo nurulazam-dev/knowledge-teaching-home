@@ -2,12 +2,16 @@ import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import brandLogo from "../../assets/logo/logo.png";
+import { LuLogIn } from "react-icons/lu";
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
     { name: "Home", path: "/" },
-    { name: "Courses", path: "/courses" },
+    // { name: "Courses", path: "/courses" },
+    { name: "Writings", path: "/writings" },
+    { name: "Grammars", path: "/grammars" },
     { name: "About", path: "/about" },
     { name: "Contact", path: "/contact" },
   ];
@@ -23,11 +27,8 @@ const Navbar = () => {
               alt="Knowledge Teaching Home"
               className="h-10 mr-2 w-auto"
             />
-            <span className="hidden md:inline text-xl lg:text-2xl bg-gradient-to-r from-violet-600 to-indigo-700 bg-clip-text text-transparent">
-              KNOWLEDGE TEACHING HOME
-            </span>
-            <span className="md:hidden text-2xl bg-gradient-to-r from-violet-600 via-indigo-600 to-orange-700 bg-clip-text text-transparent">
-              KTH
+            <span className="text-xl lg:text-2xl bg-gradient-to-r from-violet-600 to-indigo-700 bg-clip-text text-transparent">
+              K T H
             </span>
           </div>
         </Link>
@@ -66,18 +67,12 @@ const Navbar = () => {
           ))}
 
           {/* Auth */}
-          <div className="flex gap-3 ml-6">
+          <div className="flex ml-6">
             <Link
               to="/login"
-              className="btn btn-sm border-violet-600 text-violet-600 hover:bg-violet-600 hover:text-white"
+              className="border border-violet-600 text-violet-600 hover:bg-violet-600 hover:text-white px-4 py-2 rounded-md transition-colors duration-300 flex justify-center items-center"
             >
-              Login
-            </Link>
-            <Link
-              to="/register"
-              className="btn btn-sm text-white bg-gradient-to-r from-violet-600 via-indigo-600 to-orange-700 hover:opacity-90"
-            >
-              Register
+              <span>Login</span> <LuLogIn className="ml-1" />
             </Link>
           </div>
         </div>
