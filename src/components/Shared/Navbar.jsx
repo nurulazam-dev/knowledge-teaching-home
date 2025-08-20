@@ -13,25 +13,29 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-lg shadow-md">
-      <div className="container mx-auto flex justify-between items-center py-4 px-6 lg:px-12">
-        {/* Logo */}
-        <Link
-          to="/"
-          className="text-2xl lg:text-3xl font-extrabold tracking-tight text-primary hover:opacity-90 transition"
-        >
-          K<span className="text-secondary">T</span>H
+    <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-lg shadow-sm">
+      <div className="max-w-7xl mx-auto flex items-center justify-between py-4 px-6 lg:px-10">
+        {/* Brand */}
+        <Link to="/" className="font-extrabold tracking-tight">
+          <span className="hidden md:inline text-xl lg:text-2xl bg-gradient-to-r from-violet-600 via-indigo-600 to-orange-700 bg-clip-text text-transparent">
+            Knowledge Teaching Home
+          </span>
+          <span className="md:hidden text-2xl bg-gradient-to-r from-violet-600 via-indigo-600 to-orange-700 bg-clip-text text-transparent">
+            KTH
+          </span>
         </Link>
 
-        {/* Desktop Nav */}
-        <div className="hidden lg:flex gap-10 items-center">
+        {/* Desktop nav */}
+        <div className="hidden lg:flex items-center gap-8">
           {navLinks.map((link) => (
             <NavLink
               key={link.name}
               to={link.path}
               className={({ isActive }) =>
-                `relative text-base font-medium transition-all duration-300 hover:scale-105 ${
-                  isActive ? "text-primary" : "text-gray-700 hover:text-primary"
+                `relative text-[15px] font-medium transition-all duration-300 hover:scale-[1.04] ${
+                  isActive
+                    ? "text-violet-600"
+                    : "text-gray-700 hover:text-violet-600"
                 }`
               }
             >
@@ -39,13 +43,13 @@ const Navbar = () => {
                 <>
                   {link.name}
                   {isActive && (
-                    <motion.div
-                      layoutId="activeUnderline"
-                      className="absolute left-0 -bottom-1 h-[2px] w-full bg-primary rounded-full"
+                    <motion.span
+                      layoutId="kth-underline"
+                      className="absolute left-0 -bottom-1 h-[2px] w-full rounded-full bg-gradient-to-r from-violet-600 via-indigo-600 to-orange-700"
                       transition={{
                         type: "spring",
-                        stiffness: 400,
-                        damping: 30,
+                        stiffness: 500,
+                        damping: 28,
                       }}
                     />
                   )}
@@ -54,53 +58,54 @@ const Navbar = () => {
             </NavLink>
           ))}
 
-          {/* Auth buttons */}
-          <div className="flex gap-4 ml-8">
+          {/* Auth */}
+          <div className="flex gap-3 ml-6">
             <Link
               to="/login"
-              className="px-4 py-2 rounded-lg border border-primary text-primary font-medium hover:bg-primary hover:text-white transition"
+              className="btn btn-sm border-violet-600 text-violet-600 hover:bg-violet-600 hover:text-white"
             >
               Login
             </Link>
             <Link
               to="/register"
-              className="px-4 py-2 rounded-lg bg-primary text-white font-medium hover:bg-primary/90 shadow-sm transition"
+              className="btn btn-sm text-white bg-gradient-to-r from-violet-600 via-indigo-600 to-orange-700 hover:opacity-90"
             >
               Register
             </Link>
           </div>
         </div>
 
-        {/* Mobile Menu Button */}
+        {/* Mobile toggle */}
         <button
-          className="lg:hidden text-gray-800 focus:outline-none"
-          onClick={() => setIsOpen(!isOpen)}
+          className="lg:hidden p-2 rounded-md hover:bg-gray-100"
+          onClick={() => setIsOpen((s) => !s)}
+          aria-label="Toggle menu"
         >
           {isOpen ? (
             <svg
               className="w-7 h-7"
+              viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
-              viewBox="0 0 24 24"
             >
               <path
+                strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                strokeWidth="2"
                 d="M6 18L18 6M6 6l12 12"
               />
             </svg>
           ) : (
             <svg
               className="w-7 h-7"
+              viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
-              viewBox="0 0 24 24"
             >
               <path
+                strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                strokeWidth="2"
                 d="M4 6h16M4 12h16M4 18h16"
               />
             </svg>
@@ -108,40 +113,39 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Menu Drawer */}
+      {/* Mobile drawer */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -20 }}
+            initial={{ opacity: 0, y: -16 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.3 }}
-            className="lg:hidden bg-white/95 backdrop-blur-lg shadow-md"
+            exit={{ opacity: 0, y: -16 }}
+            transition={{ duration: 0.25 }}
+            className="lg:hidden bg-white/95 backdrop-blur-lg shadow"
           >
-            <ul className="flex flex-col gap-5 p-6 text-lg font-medium">
-              {navLinks.map((link) => (
+            <ul className="px-6 py-5 flex flex-col gap-4 text-lg">
+              {navLinks.map((l) => (
                 <NavLink
-                  key={link.name}
-                  to={link.path}
+                  key={l.name}
+                  to={l.path}
                   onClick={() => setIsOpen(false)}
-                  className="hover:text-primary transition-colors"
+                  className="text-gray-800 hover:text-violet-600"
                 >
-                  {link.name}
+                  {l.name}
                 </NavLink>
               ))}
-
-              <div className="flex flex-col gap-3 mt-6">
+              <div className="mt-2 grid grid-cols-2 gap-3">
                 <Link
                   to="/login"
                   onClick={() => setIsOpen(false)}
-                  className="px-4 py-2 rounded-lg border border-primary text-primary font-medium hover:bg-primary hover:text-white transition text-center"
+                  className="btn btn-outline border-violet-600 text-violet-600"
                 >
                   Login
                 </Link>
                 <Link
                   to="/register"
                   onClick={() => setIsOpen(false)}
-                  className="px-4 py-2 rounded-lg bg-primary text-white font-medium hover:bg-primary/90 shadow-sm transition text-center"
+                  className="btn text-white bg-gradient-to-r from-violet-600 via-indigo-600 to-orange-700"
                 >
                   Register
                 </Link>
