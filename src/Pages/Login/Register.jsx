@@ -7,6 +7,9 @@ import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
 import Loading from "../../components/Shared/Loading";
+import { FaUser } from "react-icons/fa";
+import { MdMailOutline } from "react-icons/md";
+import { RiLockPasswordLine } from "react-icons/ri";
 
 const Register = () => {
   const {
@@ -70,17 +73,22 @@ const Register = () => {
               >
                 Full Name
               </label>
-              <input
-                type="text"
-                placeholder="Your Name"
-                className="block w-full pl-10 pr-3 py-3 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-black text-gray-900 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:focus:ring-indigo-400 focus:border-transparent transition-all duration-200"
-                {...register("name", {
-                  required: {
-                    value: true,
-                    message: "Name is Required",
-                  },
-                })}
-              />
+              <div className="relative">
+                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-400 dark:text-gray-500">
+                  <FaUser />
+                </div>
+                <input
+                  type="text"
+                  placeholder="Your Name"
+                  className="block w-full pl-10 pr-3 py-3 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-black text-gray-900 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:focus:ring-indigo-400 focus:border-transparent transition-all duration-200"
+                  {...register("name", {
+                    required: {
+                      value: true,
+                      message: "Name is Required",
+                    },
+                  })}
+                />
+              </div>
               <label className="label">
                 {errors.name?.type === "required" && (
                   <span className="label-text-alt text-red-500">
@@ -97,21 +105,26 @@ const Register = () => {
               >
                 Email
               </label>
-              <input
-                type="email"
-                placeholder="Email Address"
-                className="block w-full pl-10 pr-3 py-3 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-black text-gray-900 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:focus:ring-indigo-400 focus:border-transparent transition-all duration-200"
-                {...register("email", {
-                  required: {
-                    value: true,
-                    message: "Email is Required",
-                  },
-                  pattern: {
-                    value: /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/,
-                    message: "Provide a valid Email",
-                  },
-                })}
-              />
+              <div className="relative">
+                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-400 dark:text-gray-500">
+                  <MdMailOutline className="w-5 h-5" />
+                </div>
+                <input
+                  type="email"
+                  placeholder="Email Address"
+                  className="block w-full pl-10 pr-3 py-3 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-black text-gray-900 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:focus:ring-indigo-400 focus:border-transparent transition-all duration-200"
+                  {...register("email", {
+                    required: {
+                      value: true,
+                      message: "Email is Required",
+                    },
+                    pattern: {
+                      value: /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/,
+                      message: "Provide a valid Email",
+                    },
+                  })}
+                />
+              </div>
               <label className="label">
                 {errors.email?.type === "required" && (
                   <span className="label-text-alt text-red-500">
@@ -133,21 +146,26 @@ const Register = () => {
               >
                 Password
               </label>
-              <input
-                type="password"
-                placeholder="Password"
-                className="block w-full pl-10 pr-3 py-3 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-black text-gray-900 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:focus:ring-indigo-400 focus:border-transparent transition-all duration-200"
-                {...register("password", {
-                  required: {
-                    value: true,
-                    message: "Password is Required",
-                  },
-                  minLength: {
-                    value: 6,
-                    message: "Must be 6 characters or longer",
-                  },
-                })}
-              />
+              <div className="relative">
+                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-400 dark:text-gray-500">
+                  <RiLockPasswordLine className="w-5 h-5" />
+                </div>
+                <input
+                  type="password"
+                  placeholder="Password"
+                  className="block w-full pl-10 pr-3 py-3 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-black text-gray-900 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:focus:ring-indigo-400 focus:border-transparent transition-all duration-200"
+                  {...register("password", {
+                    required: {
+                      value: true,
+                      message: "Password is Required",
+                    },
+                    minLength: {
+                      value: 6,
+                      message: "Must be 6 characters or longer",
+                    },
+                  })}
+                />
+              </div>
               <label className="label">
                 {errors.password?.type === "required" && (
                   <span className="label-text-alt text-red-500">
