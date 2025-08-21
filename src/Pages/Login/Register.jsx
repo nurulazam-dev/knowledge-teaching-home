@@ -46,11 +46,23 @@ const Register = () => {
 
   return (
     <div className="min-h-screen w-full flex items-center justify-center p-6">
-      <div className="card w-96 bg-base-100 shadow-xl">
-        <div className="card-body">
-          <h2 className="text-center text-2xl font-bold">Student Register</h2>
+      <div className="w-full max-w-md bg-gray-50 dark:bg-gray-900">
+        <div className="border border-gray-200 rounded-lg shadow-sm p-6">
+          {/* =====Header ===== */}
+          <div className="text-center mb-6">
+            <h1 className="text-3xl font-semibold tracking-tight text-zinc-900 dark:text-white">
+              Create account
+            </h1>
+            <p className="text-sm text-zinc-600 dark:text-zinc-400 mt-1">
+              Enter your details to get started
+            </p>
+          </div>
 
-          <form onSubmit={handleSubmit(onSubmit)}>
+          {/* =======================
+                  Form
+        ======================== */}
+          <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+            {/* ============Name Input=========== */}
             <div className="form-control w-full max-w-xs">
               <label className="label">
                 <span className="label-text">Name</span>
@@ -74,6 +86,7 @@ const Register = () => {
                 )}
               </label>
             </div>
+            {/* ============Email Input=========== */}
             <div className="form-control w-full max-w-xs">
               <label className="label">
                 <span className="label-text">Email</span>
@@ -106,6 +119,7 @@ const Register = () => {
                 )}
               </label>
             </div>
+            {/* ============password Input=========== */}
             <div className="form-control w-full max-w-xs">
               <label className="label">
                 <span className="label-text">Password</span>
@@ -140,19 +154,23 @@ const Register = () => {
             </div>
             {signInError}
             <input
-              className="btn w-full max-w-xs text-white"
               type="submit"
               value="register"
+              className="w-full bg-gradient-to-r from-indigo-600 to-violet-600 dark:from-indigo-600 dark:to-purple-700 text-white font-semibold text-xl py-3 px-4 rounded-lg hover:from-indigo-700 hover:to-purple-700 dark:hover:from-indigo-600 dark:hover:to-purple-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-indigo-400 transform transition-all duration-200 hover:scale-[1.01] shadow-lg flex justify-center items-center"
             />
           </form>
-          <p className="text-center">
-            <small>
-              Already have an account ?{" "}
-              <Link className="text-secondary" to="/studentLogin">
+          {/* ===============Footer============== */}
+          <div className="mt-6 text-center">
+            <p className="text-sm text-gray-600 dark:text-gray-400">
+              Already have an account?{" "}
+              <Link
+                to="/login"
+                className="font-medium text-indigo-600 dark:text-indigo-400 hover:text-indigo-500 dark:hover:text-indigo-300 transition-colors"
+              >
                 Please Login
-              </Link>{" "}
-            </small>
-          </p>
+              </Link>
+            </p>
+          </div>
         </div>
       </div>
     </div>
