@@ -45,7 +45,7 @@ const Register = () => {
   };
 
   return (
-    <div className="flex justify-center items-center h-screen">
+    <div className="min-h-screen w-full flex items-center justify-center p-6">
       <div className="card w-96 bg-base-100 shadow-xl">
         <div className="card-body">
           <h2 className="text-center text-2xl font-bold">Student Register</h2>

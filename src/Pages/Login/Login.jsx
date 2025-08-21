@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
-import { useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
 import Loading from "../../components/Shared/Loading";
 import { MdMailOutline } from "react-icons/md";
@@ -151,12 +151,12 @@ const Login = () => {
         <div className="text-center">
           <p className="text-sm text-gray-600 dark:text-gray-400">
             New to our platform?{" "}
-            <a
-              href="/register"
+            <Link
+              to="/register"
               className="font-medium text-indigo-600 dark:text-indigo-400 hover:text-indigo-500 dark:hover:text-indigo-300 transition-colors"
             >
               Create an account
-            </a>
+            </Link>
           </p>
         </div>
       </div>
