@@ -1,70 +1,86 @@
 import { motion } from "framer-motion";
 import {
-  FaUserPlus,
+  FaUserEdit,
   FaClipboardList,
-  FaBookOpen,
+  FaChalkboardTeacher,
   FaCheckCircle,
 } from "react-icons/fa";
 
-const steps = [
-  {
-    icon: <FaUserPlus className="text-4xl text-indigo-400" />,
-    title: "Step 1: Registration",
-    description:
-      "Fill out the online admission form with student details and select your class level.",
-  },
-  {
-    icon: <FaClipboardList className="text-4xl text-orange-400" />,
-    title: "Step 2: Assessment",
-    description:
-      "Appear for a placement test to understand your current academic level and strengths.",
-  },
-  {
-    icon: <FaBookOpen className="text-4xl text-violet-400" />,
-    title: "Step 3: Counseling",
-    description:
-      "Our mentors will guide you to choose the right course and study plan for your needs.",
-  },
-  {
-    icon: <FaCheckCircle className="text-4xl text-green-400" />,
-    title: "Step 4: Enrollment",
-    description:
-      "Confirm your admission by completing the payment process and joining your classes.",
-  },
-];
-
 const AdmissionProcess = () => {
+  const steps = [
+    {
+      id: 1,
+      icon: <FaUserEdit className="text-2xl text-indigo-400" />,
+      title: "Step 1: Registration",
+      description:
+        "Fill out the admission form with accurate details to start your journey.",
+    },
+    {
+      id: 2,
+      icon: <FaClipboardList className="text-2xl text-orange-400" />,
+      title: "Step 2: Assessment Test",
+      description:
+        "Appear for our entrance assessment to evaluate your current level.",
+    },
+    {
+      id: 3,
+      icon: <FaChalkboardTeacher className="text-2xl text-violet-400" />,
+      title: "Step 3: Counseling",
+      description:
+        "Meet with our mentors to discuss your academic goals and subjects.",
+    },
+    {
+      id: 4,
+      icon: <FaCheckCircle className="text-2xl text-green-400" />,
+      title: "Step 4: Confirmation",
+      description:
+        "Complete the admission process and start attending your classes.",
+    },
+  ];
+
   return (
     <section className="bg-gradient-to-b from-[#050d1a] to-[#0a1629] text-white py-16 px-6">
-      <div className="max-w-6xl mx-auto text-center">
-        <motion.h2
-          initial={{ opacity: 0, y: -30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
-          className="text-4xl md:text-5xl font-bold mb-6"
-        >
+      <div className="max-w-5xl mx-auto text-center mb-12">
+        <h2 className="text-3xl md:text-4xl font-bold mb-4">
           Admission Process
-        </motion.h2>
-        <p className="text-gray-300 max-w-3xl mx-auto mb-12">
-          Join{" "}
+        </h2>
+        <p className="text-gray-300">
+          Follow these simple steps to join{" "}
           <span className="text-indigo-400 font-semibold">
             Knowledge Teaching Home
-          </span>{" "}
-          easily by following these four simple steps.
+          </span>
+          .
         </p>
+      </div>
 
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+      <div className="relative max-w-3xl mx-auto">
+        {/* Vertical Line */}
+        <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gray-700 rounded"></div>
+
+        <div className="space-y-12">
           {steps.map((step, index) => (
             <motion.div
-              key={index}
+              key={step.id}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
-              className="bg-[#0f1d36] p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all"
+              transition={{ duration: 0.5, delay: index * 0.2 }}
+              className={`relative flex items-center ${
+                index % 2 === 0 ? "justify-start" : "justify-end"
+              }`}
             >
-              <div className="flex justify-center mb-4">{step.icon}</div>
-              <h3 className="text-xl font-semibold mb-3">{step.title}</h3>
-              <p className="text-gray-400 text-sm">{step.description}</p>
+              {/* Content Card */}
+              <div className="bg-[#101b37] shadow-lg rounded-2xl p-6 w-80 md:w-96 relative z-10">
+                <div className="flex items-center gap-3 mb-3">
+                  <span>{step.icon}</span>
+                  <h3 className="text-xl font-semibold">{step.title}</h3>
+                </div>
+                <p className="text-gray-300 text-sm">{step.description}</p>
+              </div>
+
+              {/* Step Dot */}
+              <div className="absolute left-1/2 transform -translate-x-1/2 w-10 h-10 rounded-full bg-indigo-600 flex items-center justify-center shadow-lg z-20">
+                <span className="text-white font-bold">{step.id}</span>
+              </div>
             </motion.div>
           ))}
         </div>
