@@ -1,4 +1,3 @@
-import React from "react";
 import {
   useCreateUserWithEmailAndPassword,
   useUpdateProfile,
@@ -187,7 +186,7 @@ const Register = () => {
             />
           </form>
           {/* ===============Footer============== */}
-          <div className="mt-6 text-center">
+          <div className="mt-2 text-center">
             <p className="text-sm text-gray-600 dark:text-gray-400">
               Already have an account?{" "}
               <Link
