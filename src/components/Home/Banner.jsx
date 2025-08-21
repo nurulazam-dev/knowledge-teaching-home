@@ -2,9 +2,9 @@ import bannerImg from "../../assets/banner/BannerImg.png";
 
 const Banner = () => {
   return (
-    <div>
+    <section>
       <img src={bannerImg} alt="Banner_Image" />
-    </div>
+    </section>
   );
 };
 

@@ -8,6 +8,7 @@ import NotFound from "../Pages/NotFound";
 import WritingsPage from "../Pages/Writings/WritingsPage";
 import GrammarsPage from "../Pages/Grammars/GrammarsPage";
 import ParagraphsPage from "../Pages/Writings/ParagraphsPage";
+import LetterPage from "../Pages/Writings/LetterPage";
 
 const Routers = () => {
   return (
@@ -20,6 +21,7 @@ const Routers = () => {
       <Route path="/contact" element={<Contact />} />
       <Route path="/writings" element={<WritingsPage />} />
       <Route path="/writings/paragraphs" element={<ParagraphsPage />} />
+      <Route path="/writings/letters" element={<LetterPage />} />
       <Route path="/grammars" element={<GrammarsPage />} />
       {/* <Route
         path="/services/:id"

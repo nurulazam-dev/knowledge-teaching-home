@@ -18,7 +18,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="sticky top-0 left-0 w-full z-50 bg-gradient-to-b from-[#050d1a] to-[#0a1629] text-white shadow-lg border border-b-slate-200">
+    <header className="sticky top-0 left-0 w-full z-50 bg-gradient-to-b from-[#050d1a] to-[#0a1629] text-white shadow-lg">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
         {/* Logo */}
         <Link to="/" className="text-2xl font-bold tracking-tight">
