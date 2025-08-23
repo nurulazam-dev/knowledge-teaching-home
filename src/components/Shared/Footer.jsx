@@ -2,8 +2,11 @@ import {
   FaFacebookF,
   FaInstagram,
   FaLinkedinIn,
+  FaMapMarkerAlt,
+  FaPhoneAlt,
   FaTwitter,
 } from "react-icons/fa";
+import { FiMail } from "react-icons/fi";
 
 const Footer = () => {
   return (
@@ -57,9 +60,19 @@ const Footer = () => {
         {/* Contact Info */}
         <div>
           <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
-          <p className="text-gray-400">📍 123/4 Main Road, Dhaka, Bangladesh</p>
-          <p className="text-gray-400">📞 +880 1700-000000</p>
-          <p className="text-gray-400">✉️ info@knowledgehome.com</p>
+          <div className="mt-2 flex items-center">
+            <FaMapMarkerAlt className="inline-block mr-1 text-red-600" />{" "}
+            <p className="text-gray-400">East Raozan, Raozan, Ctg.</p>
+          </div>
+          <div className="mt-2 flex items-center">
+            <FaPhoneAlt className="inline-block mr-1 text-red-600" />{" "}
+            <p className="text-gray-400">+880 1881-131834</p>
+          </div>
+
+          <div className="mt-2 flex items-center">
+            <FiMail className="inline-block mr-1 text-red-600" />{" "}
+            <p className="text-gray-400">nurulazam.dev@gmail.com</p>
+          </div>
         </div>
 
         {/* Social Media */}
