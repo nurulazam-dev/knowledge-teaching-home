@@ -13,6 +13,7 @@ import EmailPage from "../Pages/Writings/EmailPage";
 import CompositionsPage from "../Pages/Writings/CompositionsPage";
 import ApplicationsPage from "../Pages/Writings/ApplicationsPage";
 import StoriesPage from "../Pages/Writings/StoriesPage";
+import Dashboard from "../Pages/Dashboard";
 
 const Routers = () => {
   return (
@@ -31,6 +32,7 @@ const Routers = () => {
       <Route path="/writings/emails" element={<EmailPage />} />
       <Route path="/writings/stories" element={<StoriesPage />} />
       <Route path="/grammars" element={<GrammarsPage />} />
+      <Route path="/dashboard" element={<Dashboard />} />
       {/* <Route
         path="/services/:id"
         element={
