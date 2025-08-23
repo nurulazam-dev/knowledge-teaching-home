@@ -42,7 +42,7 @@ const writings = [
 
 export default function WritingsPage() {
   return (
-    <section className="bg-gradient-to-b from-[#050d1a] to-[#0a1629] text-white py-20 px-6">
+    <section className="bg-gradient-to-b from-[#050d1a] to-[#0a1629] text-white py-8 px-6">
       <div className="max-w-6xl mx-auto text-center">
         <motion.h2
           initial={{ opacity: 0, y: -20 }}
@@ -52,7 +52,7 @@ export default function WritingsPage() {
         >
           ✍️ Writings Practice
         </motion.h2>
-        <p className="text-gray-300 mb-12 max-w-2xl mx-auto">
+        <p className="text-gray-300 mb-7 max-w-2xl mx-auto">
           Explore all types of writings to improve your academic and creative
           skills.
         </p>

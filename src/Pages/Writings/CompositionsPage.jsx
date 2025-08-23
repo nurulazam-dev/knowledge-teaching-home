@@ -85,7 +85,7 @@ export default function CompositionsPage() {
       : "text-lg leading-8";
 
   return (
-    <section className="min-h-screen bg-gradient-to-b from-[#050d1a] to-[#0a1629] text-white py-16 px-6 md:px-10">
+    <section className="min-h-screen bg-gradient-to-b from-[#050d1a] to-[#0a1629] text-white py-6 px-6 md:px-10">
       {/* Header */}
       <div className="max-w-7xl mx-auto text-center mb-10">
         <motion.h1
