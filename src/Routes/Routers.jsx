@@ -11,6 +11,7 @@ import ParagraphsPage from "../Pages/Writings/ParagraphsPage";
 import LetterPage from "../Pages/Writings/LetterPage";
 import EmailPage from "../Pages/Writings/EmailPage";
 import CompositionsPage from "../Pages/Writings/CompositionsPage";
+import ApplicationsPage from "../Pages/Writings/ApplicationsPage";
 
 const Routers = () => {
   return (
@@ -25,6 +26,7 @@ const Routers = () => {
       <Route path="/writings/paragraphs" element={<ParagraphsPage />} />
       <Route path="/writings/compositions" element={<CompositionsPage />} />
       <Route path="/writings/letters" element={<LetterPage />} />
+      <Route path="/writings/applications" element={<ApplicationsPage />} />
       <Route path="/writings/emails" element={<EmailPage />} />
       <Route path="/grammars" element={<GrammarsPage />} />
       {/* <Route
