@@ -1,42 +1,50 @@
 import { motion } from "framer-motion";
 import {
+  FaArrowRight,
   FaBookOpen,
   FaEdit,
   FaFileSignature,
   FaMailBulk,
 } from "react-icons/fa";
 import { FiFileText, FiPenTool } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 const writings = [
   {
     title: "Paragraphs",
     description: "Short, concise writings to improve your skills.",
     icon: <FiFileText className="w-10 h-10 text-blue-400" />,
+    link: "/writings/paragraphs",
   },
   {
     title: "Compositions",
     description: "Well-structured essays for deeper understanding.",
     icon: <FaBookOpen className="w-10 h-10 text-green-400" />,
+    link: "/writings/compositions",
   },
   {
     title: "Emails",
     description: "Formal & informal email writing practice.",
     icon: <FaMailBulk className="w-10 h-10 text-yellow-400" />,
+    link: "/writings/emails",
   },
   {
     title: "Letters",
     description: "Friendly and official letter writing guidance.",
     icon: <FaFileSignature className="w-10 h-10 text-red-400" />,
+    link: "/writings/letters",
   },
   {
     title: "Stories",
     description: "Creative story writing to build imagination.",
     icon: <FiPenTool className="w-10 h-10 text-purple-400" />,
+    link: "/writings/stories",
   },
   {
     title: "Applications",
     description: "Learn to write formal applications effectively.",
     icon: <FaEdit className="w-10 h-10 text-pink-400" />,
+    link: "/writings/applications",
   },
 ];
 
@@ -65,11 +73,17 @@ export default function WritingsPage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
               whileHover={{ scale: 1.05 }}
-              className="bg-[#0f1b33] p-6 rounded-2xl shadow-lg hover:shadow-2xl transition cursor-pointer"
+              className="bg-[#0f1b33] p-6 rounded-2xl shadow-lg hover:shadow-2xl transition"
             >
               <div className="flex justify-center mb-4">{item.icon}</div>
               <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-              <p className="text-gray-400 text-sm">{item.description}</p>
+              <p className="text-gray-400 text-sm mb-4">{item.description}</p>
+              <Link
+                to={item?.link}
+                className="inline-block bg-orange-600 hover:bg-white px-6 py-2 rounded-lg text-sm font-medium transition hover:text-orange-600"
+              >
+                Details <FaArrowRight className="inline-block ml-1" />
+              </Link>
             </motion.div>
           ))}
         </div>

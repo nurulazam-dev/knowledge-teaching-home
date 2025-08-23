@@ -12,6 +12,7 @@ import LetterPage from "../Pages/Writings/LetterPage";
 import EmailPage from "../Pages/Writings/EmailPage";
 import CompositionsPage from "../Pages/Writings/CompositionsPage";
 import ApplicationsPage from "../Pages/Writings/ApplicationsPage";
+import StoriesPage from "../Pages/Writings/StoriesPage";
 
 const Routers = () => {
   return (
@@ -28,6 +29,7 @@ const Routers = () => {
       <Route path="/writings/letters" element={<LetterPage />} />
       <Route path="/writings/applications" element={<ApplicationsPage />} />
       <Route path="/writings/emails" element={<EmailPage />} />
+      <Route path="/writings/stories" element={<StoriesPage />} />
       <Route path="/grammars" element={<GrammarsPage />} />
       {/* <Route
         path="/services/:id"
