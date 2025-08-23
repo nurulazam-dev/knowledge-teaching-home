@@ -14,11 +14,11 @@ export default function Dashboard() {
   ];
 
   return (
-    <div className="flex h-screen bg-gray-100">
+    <div className="flex h-screen bg-gradient-to-b from-[#050d1a] to-[#0a1629] text-white">
       {/* Sidebar */}
-      <aside className="w-64 bg-white shadow-lg flex flex-col">
+      <aside className="w-64 bg-gradient-to-b from-[#031d48] to-[#0a1629] shadow-lg flex flex-col">
         <div className="p-6 text-2xl font-bold text-indigo-600">
-          Edu Dashboard
+          KTH Dashboard
         </div>
         <nav className="flex-1 px-4 space-y-2">
           {menuItems.map((item) => (
@@ -28,7 +28,7 @@ export default function Dashboard() {
               className={`flex items-center w-full px-4 py-2 text-left rounded-lg transition ${
                 active === item.name
                   ? "bg-indigo-600 text-white"
-                  : "text-gray-700 hover:bg-indigo-100"
+                  : "text-gray-300 hover:bg-indigo-100 hover:text-slate-800"
               }`}
             >
               <span className="mr-3">{item.icon}</span>
@@ -37,13 +37,13 @@ export default function Dashboard() {
           ))}
         </nav>
         <button className="flex items-center px-4 py-3 text-red-600 hover:bg-red-100">
-          <FiLogOut size={20} className="mr-3" /> Logout
+          Logout <FiLogOut size={20} className="ml-3" />
         </button>
       </aside>
 
       {/* Main content */}
-      <main className="flex-1 p-6 overflow-y-auto">
-        <h1 className="text-3xl font-semibold mb-6">{active}</h1>
+      <main className="flex-1 p-6 overflow-y-auto text-slate-900">
+        <h1 className="text-3xl font-semibold mb-6 text-slate-200">{active}</h1>
 
         {/* Dummy Content */}
         {active === "Overview" && (
