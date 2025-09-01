@@ -25,7 +25,7 @@ const About = () => {
           </span>
           guiding students of{" "}
           <span className="text-orange-400">
-            School, Madrasha & College (Class 3 to 12)
+            School, Madrasha & College (Class 6 to 12)
           </span>{" "}
           with structured lessons, personal care, and proven results.
         </p>

@@ -12,7 +12,7 @@ const features = [
     icon: <FaChalkboardTeacher className="text-4xl text-orange-500" />,
     title: "Experienced Mentors",
     description:
-      "Our highly qualified teachers guide students with proven teaching methods for all classes (3–12).",
+      "Our highly qualified teachers guide students with proven teaching methods for all classes (6–12).",
   },
   {
     id: 2,
@@ -56,7 +56,7 @@ export default function WhyChooseUs() {
             Knowledge Teaching Home
           </span>
           , we are dedicated to building strong academic foundations for
-          students from class 3 to class 12.
+          students from class 6 to class 12.
         </p>
       </div>
 

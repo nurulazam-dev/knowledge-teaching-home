@@ -58,7 +58,7 @@ const Mentors = () => {
           Meet Our <span className="text-orange-500">Mentors</span>
         </motion.h2>
         <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-          Our experienced mentors guide students from Class 3 to Class 12,
+          Our experienced mentors guide students from Class 6 to Class 12,
           covering all subjects including School, Madrasha & College levels.
         </p>
 

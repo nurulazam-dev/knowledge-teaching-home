@@ -6,7 +6,7 @@ const achievements = [
     icon: <FaGraduationCap className="w-10 h-10 text-yellow-400" />,
     title: "95%+ Success Rate",
     description:
-      "Our students consistently achieve top grades in board exams from Class 3 to 12.",
+      "Our students consistently achieve top grades in board exams from Class 6 to 12.",
   },
   {
     icon: <FaTrophy className="w-10 h-10 text-indigo-400" />,

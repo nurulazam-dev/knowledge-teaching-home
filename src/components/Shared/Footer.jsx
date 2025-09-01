@@ -10,7 +10,7 @@ import { FiMail } from "react-icons/fi";
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-b from-[#050d1a] to-[#0a1629] text-white py-10 px-6 md:px-16 lg:px-24">
+    <footer className="bg-gradient-to-b from-[#050d1a] to-[#0a1629] text-white py-10 px-6 md:px-10 lg:px-15">
       <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
         {/* Logo & About */}
         <div>
@@ -19,7 +19,7 @@ const Footer = () => {
             A trusted coaching center where we teach and guide students from
             <span className="font-medium text-white">
               {" "}
-              class 3 to class 12{" "}
+              class 6 to class 12{" "}
             </span>
             (School, Madrasha & College) with care and dedication.
           </p>
@@ -108,9 +108,29 @@ const Footer = () => {
       </div>
 
       {/* Bottom */}
-      <div className="border-t border-gray-700 mt-10 pt-6 text-center text-gray-500 text-sm">
-        © {new Date().getFullYear()} Knowledge Teaching Home. All Rights
-        Reserved.
+      <div className="border-t border-gray-700 mt-10 pt-6 text-gray-500 text-sm block lg:flex md:flex justify-between items-center text-center">
+        <p>
+          Developed by{" "}
+          <a
+            href="https://nurulazam-dev.web.app/"
+            className="text-orange-400 hover:underline"
+          >
+            Nurul Azam
+          </a>
+        </p>
+        <p>
+          © {new Date().getFullYear()} Knowledge Teaching Home. All Rights
+          Reserved.
+        </p>
+        <p>
+          Powered by{" "}
+          <a
+            href="https://mnawebprogramming.web.app/"
+            className="text-orange-400 hover:underline"
+          >
+            MNA Web Programming
+          </a>
+        </p>
       </div>
     </footer>
   );

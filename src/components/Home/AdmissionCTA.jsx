@@ -28,7 +28,7 @@ export default function AdmissionCTA() {
         >
           Unlock your full potential with expert mentors, personalized guidance,
           and a supportive learning environment for students from{" "}
-          <span className="font-semibold text-white">Class 3 to Class 12</span>.
+          <span className="font-semibold text-white">Class 6 to Class 12</span>.
         </motion.p>
 
         {/* Call to Action Button */}

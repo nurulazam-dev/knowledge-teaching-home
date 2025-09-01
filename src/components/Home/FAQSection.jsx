@@ -6,7 +6,7 @@ const faqs = [
   {
     question: "What classes do you offer at Knowledge Teaching Home?",
     answer:
-      "We provide coaching for students from Class 3 to Class 12 across school, college, and madrasha curriculums with subject-wise expert mentors.",
+      "We provide coaching for students from Class 6 to Class 12 across school, college, and madrasha curriculums with subject-wise expert mentors.",
   },
   {
     question: "How can I enroll in a course?",

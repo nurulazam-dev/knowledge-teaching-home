@@ -22,7 +22,7 @@ export default function Hero() {
               private coaching center{" "}
             </span>
             where students from{" "}
-            <span className="text-orange-400">class 3 to 12</span> — school,
+            <span className="text-orange-400">class 6 to 12</span> — school,
             madrasha, and college — learn with care and guidance.
           </p>
 
@@ -49,7 +49,7 @@ export default function Hero() {
               whileHover={{ scale: 1.05 }}
             >
               <FaBookOpen className="text-5xl text-orange-500 mb-3" />
-              <p className="text-lg font-semibold">School (Class 3-10)</p>
+              <p className="text-lg font-semibold">School (Class 6-10)</p>
             </motion.div>
 
             <motion.div
