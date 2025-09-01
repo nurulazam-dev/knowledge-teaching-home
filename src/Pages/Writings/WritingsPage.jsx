@@ -6,10 +6,11 @@ import {
   // FaFileSignature,
   FaMailBulk,
 } from "react-icons/fa";
+import { FaPersonMilitaryToPerson } from "react-icons/fa6";
 import { FiFileText } from "react-icons/fi";
 import { TfiWrite } from "react-icons/tfi";
 import { SlEnvolopeLetter } from "react-icons/sl";
-import { TbBrandStorybook } from "react-icons/tb";
+import { TbBrandStorybook, TbFileCv } from "react-icons/tb";
 import { Link } from "react-router-dom";
 
 const writings = [
@@ -44,16 +45,28 @@ const writings = [
     link: "/writings/letters",
   },
   {
+    title: "Applications",
+    description: "Learn to write formal applications effectively.",
+    icon: <FaEdit className="w-10 h-10 text-pink-400" />,
+    link: "/writings/applications",
+  },
+  {
+    title: "Curriculum Vitae (CV)",
+    description: "Learn to write effective CVs.",
+    icon: <TbFileCv className="w-10 h-10 text-pink-400" />,
+    link: "/writings/cv",
+  },
+  {
     title: "Stories",
     description: "Creative story writing to build imagination.",
     icon: <TbBrandStorybook className="w-10 h-10 text-purple-400" />,
     link: "/writings/stories",
   },
   {
-    title: "Applications",
-    description: "Learn to write formal applications effectively.",
-    icon: <FaEdit className="w-10 h-10 text-pink-400" />,
-    link: "/writings/applications",
+    title: "Dialogue Writing",
+    description: "Learn to write engaging dialogues effectively.",
+    icon: <FaPersonMilitaryToPerson className="w-10 h-10 text-pink-400" />,
+    link: "/writings/dialogue-writing",
   },
 ];
 

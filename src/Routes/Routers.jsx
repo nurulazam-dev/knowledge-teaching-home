@@ -14,6 +14,7 @@ import CompositionsPage from "../Pages/Writings/CompositionsPage";
 import ApplicationsPage from "../Pages/Writings/ApplicationsPage";
 import StoriesPage from "../Pages/Writings/StoriesPage";
 import Dashboard from "../Pages/Dashboard";
+import FormalWriting from "../Pages/Writings/FormalWriting";
 
 const Routers = () => {
   return (
@@ -25,6 +26,7 @@ const Routers = () => {
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/writings" element={<WritingsPage />} />
+      <Route path="/writings/formal-writing" element={<FormalWriting />} />
       <Route path="/writings/paragraphs" element={<ParagraphsPage />} />
       <Route path="/writings/compositions" element={<CompositionsPage />} />
       <Route path="/writings/letters" element={<LetterPage />} />
