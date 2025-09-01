@@ -3,13 +3,22 @@ import {
   FaArrowRight,
   FaBookOpen,
   FaEdit,
-  FaFileSignature,
+  // FaFileSignature,
   FaMailBulk,
 } from "react-icons/fa";
-import { FiFileText, FiPenTool } from "react-icons/fi";
+import { FiFileText } from "react-icons/fi";
+import { TfiWrite } from "react-icons/tfi";
+import { SlEnvolopeLetter } from "react-icons/sl";
+import { TbBrandStorybook } from "react-icons/tb";
 import { Link } from "react-router-dom";
 
 const writings = [
+  {
+    title: "Formal Writing",
+    description: "Master the art of formal writing.",
+    icon: <TfiWrite className="w-10 h-10 text-violet-500" />,
+    link: "/writings/formal-writing",
+  },
   {
     title: "Paragraphs",
     description: "Short, concise writings to improve your skills.",
@@ -31,13 +40,13 @@ const writings = [
   {
     title: "Letters",
     description: "Friendly and official letter writing guidance.",
-    icon: <FaFileSignature className="w-10 h-10 text-red-400" />,
+    icon: <SlEnvolopeLetter className="w-10 h-10 text-red-400" />,
     link: "/writings/letters",
   },
   {
     title: "Stories",
     description: "Creative story writing to build imagination.",
-    icon: <FiPenTool className="w-10 h-10 text-purple-400" />,
+    icon: <TbBrandStorybook className="w-10 h-10 text-purple-400" />,
     link: "/writings/stories",
   },
   {
@@ -75,8 +84,10 @@ export default function WritingsPage() {
               whileHover={{ scale: 1.05 }}
               className="bg-[#0f1b33] p-6 rounded-2xl shadow-lg hover:shadow-2xl transition"
             >
-              <div className="flex justify-center mb-4">{item.icon}</div>
-              <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
+              <div className="flex justify-center items-center gap-4 mb-2">
+                <div className="flex justify-center">{item.icon}</div>
+                <h3 className="text-xl font-semibold">{item.title}</h3>
+              </div>
               <p className="text-gray-400 text-sm mb-4">{item.description}</p>
               <Link
                 to={item?.link}
