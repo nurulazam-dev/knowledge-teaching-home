@@ -1,13 +1,18 @@
 import { motion } from "framer-motion";
-import { FaFacebookF, FaLinkedinIn, FaInstagram } from "react-icons/fa";
+import {
+  FaFacebookF,
+  FaLinkedinIn,
+  FaInstagram,
+  FaUserCircle,
+} from "react-icons/fa";
 
 const mentors = [
   {
     id: 1,
     name: "Mohammad Nurul Azam",
-    subject: "Mathematics Mentor",
-    image: "https://i.ibb.co/1vd0M4R/mentor1.jpg",
-    bio: "Expert in Algebra, Geometry & Higher Math with 10+ years of experience.",
+    subject: "Mathematics, Accounting and Finance Mentor",
+    image: "https://nurulazam-dev.web.app/assets/mnaHeroImg-BlpkimJB.png",
+    bio: "Expert in Math, Accounting & Finance with 12+ years of experience.",
     socials: {
       facebook: "#",
       instagram: "#",
@@ -18,7 +23,7 @@ const mentors = [
     id: 2,
     name: "Fatema Jannat",
     subject: "English Mentor",
-    image: "https://i.ibb.co/9WnMMr7/mentor2.jpg",
+    // image: "https://i.ibb.co/9WnMMr7/mentor2.jpg",
     bio: "Specialist in English Literature & Grammar, guiding students for SSC & HSC.",
     socials: {
       facebook: "#",
@@ -29,9 +34,9 @@ const mentors = [
   {
     id: 3,
     name: "Abdul Karim",
-    subject: "Science Mentor",
-    image: "https://i.ibb.co/FDyRrHs/mentor3.jpg",
-    bio: "Dedicated to Physics, Chemistry & Biology with 12+ years of teaching.",
+    subject: "Science and ICT Mentor",
+    // image: "https://i.ibb.co/jD3tCd4/mna.png",
+    bio: "Dedicated to Physics, Chemistry , Biology & ICT with 10+ years of teaching.",
     socials: {
       facebook: "#",
       instagram: "#",
@@ -58,29 +63,35 @@ const Mentors = () => {
         </p>
 
         <div className="grid md:grid-cols-3 gap-10">
-          {mentors.map((mentor, index) => (
+          {mentors?.map((mentor, index) => (
             <motion.div
-              key={mentor.id}
+              key={mentor?.id}
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.2, duration: 0.6 }}
               className="bg-[#0f1e38] rounded-2xl shadow-lg overflow-hidden group hover:shadow-2xl transition"
             >
               <div className="relative">
-                <img
-                  src={mentor.image}
-                  alt={mentor.name}
-                  className="w-full h-64 object-cover transform group-hover:scale-105 transition duration-500"
-                />
+                <div className="flex justify-center items-center">
+                  {mentor?.image ? (
+                    <img
+                      src={mentor?.image}
+                      alt={mentor?.name}
+                      className="w-60 h-60  transform group-hover:scale-105 transition duration-500"
+                    />
+                  ) : (
+                    <FaUserCircle className="w-60 h-60 text-gray-500 py-5 transform group-hover:scale-105 transition duration-500" />
+                  )}
+                </div>
                 <div className="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 flex justify-center items-center gap-4 transition">
                   <a
-                    href={mentor.socials.facebook}
+                    href={mentor?.socials?.facebook}
                     className="bg-white text-blue-600 p-2 rounded-full hover:bg-orange-500 hover:text-white"
                   >
                     <FaFacebookF />
                   </a>
                   <a
-                    href={mentor.socials.instagram}
+                    href={mentor?.socials?.instagram}
                     className="bg-white text-pink-700 p-2 rounded-full hover:bg-orange-500 hover:text-white"
                   >
                     <FaInstagram />
@@ -93,7 +104,7 @@ const Mentors = () => {
                   </a>
                 </div>
               </div>
-              <div className="p-6 text-center">
+              <div className="p-6 pt-1 text-center">
                 <h3 className="text-xl font-semibold mb-1">{mentor.name}</h3>
                 <p className="text-orange-400 mb-2">{mentor.subject}</p>
                 <p className="text-gray-300 text-sm">{mentor.bio}</p>
